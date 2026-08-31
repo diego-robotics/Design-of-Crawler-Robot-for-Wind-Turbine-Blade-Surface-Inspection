@@ -1,0 +1,30 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Matches Gazebo's 1000Hz simulation rate
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    # THIS is the missing block that caused your crash!
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - joint0
+      - joint1
+      - joint2
+    
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    # The PID gains we added earlier to give the motors "strength"
+    gains:
+      joint0: {p: 1000.0, i: 0.1, d: 10.0}
+      joint1: {p: 1000.0, i: 0.1, d: 10.0}
+      joint2: {p: 1000.0, i: 0.1, d: 10.0}

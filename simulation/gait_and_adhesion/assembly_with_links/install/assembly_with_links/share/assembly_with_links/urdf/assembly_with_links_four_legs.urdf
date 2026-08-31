@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="assembly_with_links">
+
+  <link name="dummy_root"/>
+
+  <joint name="dummy_to_base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="dummy_root"/>
+    <child link="base_link"/>
+  </joint>
+
+  <link name="base_link">
+    <inertial>
+      <mass value="50.0"/>
+      <inertia ixx="4.21" ixy="0.0" ixz="0.0" iyy="9.42" iyz="0.0" izz="13.54"/>
+    </inertial>
+    <visual>
+      <geometry><box size="1.5 1.0 0.1"/></geometry>
+    </visual>
+    <collision>
+      <geometry><box size="1.5 1.0 0.1"/></geometry>
+    </collision>
+  </link>
+  
+  <joint name="fL_base_joint" type="fixed">
+    <origin xyz="-2.75 1.75 0" rpy="0 0 0.785"/> 
+    <parent link="base_link"/><child link="fL_base_link"/>
+  </joint>
+  
+  <link name="fL_base_link">
+    <inertial>
+      <origin xyz="-0.6525 0.1616 0.0" rpy="0 0 0" />
+      <mass value="12.168" />
+      <inertia ixx="2.624" ixy="-0.119" ixz="-0.004" iyy="4.218" iyz="0.0002" izz="5.383" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/base_link.STL" scale="3.0 3.0 3.0" /></geometry>
+      <material name=""><color rgba="0.792 0.819 0.933 1" /></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/base_link.STL" scale="3.0 3.0 3.0" /></geometry>
+    </collision>
+  </link>
+
+  <link name="fL_link_1">
+    <inertial>
+      <origin xyz="-0.1251 0.1844 0.2083" rpy="0 0 0" />
+      <mass value="10.847" />
+      <inertia ixx="7.690" ixy="0.087" ixz="-0.460" iyy="7.518" iyz="-0.149" izz="8.577" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_1.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_1.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="fL_joint0" type="revolute">
+    <origin xyz="-0.3601 -3.0495 0" rpy="1.5708 0 -1.064" />
+    <parent link="fL_base_link" /><child link="fL_link_1" />
+    <axis xyz="0 1 0" /><limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+  
+  <link name="fL_link_2">
+    <inertial>
+      <origin xyz="-0.1108 0.1487 0.1419" rpy="0 0 0" />
+      <mass value="22.972" />
+      <inertia ixx="14.134" ixy="3.274" ixz="2.479" iyy="12.341" iyz="-5.476" izz="11.471" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_2.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_2.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="fL_joint1" type="revolute">
+    <origin xyz="-0.1247 0.0924 0.2086" rpy="0.58478 -0.10213 0.33637" />
+    <parent link="fL_link_1" />
+    <child link="fL_link_2" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <link name="fL_link_3">
+    <inertial>
+      <origin xyz="-0.0259 -0.1445 0.0394" rpy="0 0 0" />
+      <mass value="5.026" />
+      <inertia ixx="2.513" ixy="-0.275" ixz="0.249" iyy="0.596" iyz="0.471" izz="2.241" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_3.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_3.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="fL_joint2" type="revolute">
+    <origin xyz="-0.0917 0.1487 0.1533" rpy="-1.5826 -0.64796 -0.64086" />
+    <parent link="fL_link_2" />
+    <child link="fL_link_3" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <link name="fL_link_4">
+    <inertial>
+      <origin xyz="-0.0775 -0.7969 0.1371" rpy="0 0 0" />
+      <mass value="7.167" />
+      <inertia ixx="1.176" ixy="-0.023" ixz="-0.189" iyy="1.234" iyz="0.037" izz="1.340" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_4.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_4.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="fL_joint3" type="revolute">
+    <origin xyz="-0.0238 -0.1426 0.0399" rpy="-0.15279 -0.0069803 -0.091129" />
+    <parent link="fL_link_3" />
+    <child link="fL_link_4" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <joint name="fR_base_joint" type="fixed">
+    <origin xyz="1.5 2.5 0" rpy="0 0 -0.785"/> 
+    <parent link="base_link"/><child link="fR_base_link"/>	
+  </joint>
+  
+  <link name="fR_base_link">
+    <inertial>
+      <origin xyz="-0.6525 0.1616 0.0" rpy="0 0 0" />
+      <mass value="12.168" />
+      <inertia ixx="2.624" ixy="-0.119" ixz="-0.004" iyy="4.218" iyz="0.0002" izz="5.383" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/base_link.STL" scale="3.0 3.0 3.0" /></geometry><material name=""><color rgba="0.792 0.819 0.933 1" /></material></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/base_link.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <link name="fR_link_1">
+    <inertial>
+      <origin xyz="-0.1251 0.1844 0.2083" rpy="0 0 0" />
+      <mass value="10.847" />
+      <inertia ixx="7.690" ixy="0.087" ixz="-0.460" iyy="7.518" iyz="-0.149" izz="8.577" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_1.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_1.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="fR_joint0" type="revolute">
+    <origin xyz="-0.3601 -3.0495 0" rpy="1.5708 0 -1.064" />
+    <parent link="fR_base_link" /><child link="fR_link_1" />
+    <axis xyz="0 1 0" /><limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+  
+  <link name="fR_link_2">
+    <inertial>
+      <origin xyz="-0.1108 0.1487 0.1419" rpy="0 0 0" />
+      <mass value="22.972" />
+      <inertia ixx="14.134" ixy="3.274" ixz="2.479" iyy="12.341" iyz="-5.476" izz="11.471" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_2.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_2.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="fR_joint1" type="revolute">
+    <origin xyz="-0.1247 0.0924 0.2086" rpy="0.58478 -0.10213 0.33637" />
+    <parent link="fR_link_1" />
+    <child link="fR_link_2" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <link name="fR_link_3">
+    <inertial>
+      <origin xyz="-0.0259 -0.1445 0.0394" rpy="0 0 0" />
+      <mass value="5.026" />
+      <inertia ixx="2.513" ixy="-0.275" ixz="0.249" iyy="0.596" iyz="0.471" izz="2.241" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_3.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_3.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="fR_joint2" type="revolute">
+    <origin xyz="-0.0917 0.1487 0.1533" rpy="-1.5826 -0.64796 -0.64086" />
+    <parent link="fR_link_2" />
+    <child link="fR_link_3" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <link name="fR_link_4">
+    <inertial>
+      <origin xyz="-0.0775 -0.7969 0.1371" rpy="0 0 0" />
+      <mass value="7.167" />
+      <inertia ixx="1.176" ixy="-0.023" ixz="-0.189" iyy="1.234" iyz="0.037" izz="1.340" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_4.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_4.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="fR_joint3" type="revolute">
+    <origin xyz="-0.0238 -0.1426 0.0399" rpy="-0.15279 -0.0069803 -0.091129" />
+    <parent link="fR_link_3" />
+    <child link="fR_link_4" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+  
+  <joint name="bL_base_joint" type="fixed">
+    <origin xyz="-1.5 -2.5 0" rpy="0 0 2.356"/> 
+    <parent link="base_link"/><child link="bL_base_link"/>
+  </joint>
+  
+  <link name="bL_base_link">
+    <inertial>
+      <origin xyz="-0.6525 0.1616 0.0" rpy="0 0 0" />
+      <mass value="12.168" />
+      <inertia ixx="2.624" ixy="-0.119" ixz="-0.004" iyy="4.218" iyz="0.0002" izz="5.383" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/base_link.STL" scale="3.0 3.0 3.0" /></geometry><material name=""><color rgba="0.792 0.819 0.933 1" /></material></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/base_link.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <link name="bL_link_1">
+    <inertial>
+      <origin xyz="-0.1251 0.1844 0.2083" rpy="0 0 0" />
+      <mass value="10.847" />
+      <inertia ixx="7.690" ixy="0.087" ixz="-0.460" iyy="7.518" iyz="-0.149" izz="8.577" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_1.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_1.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="bL_joint0" type="revolute">
+    <origin xyz="-0.3601 -3.0495 0" rpy="1.5708 0 -1.064" />
+    <parent link="bL_base_link" /><child link="bL_link_1" />
+    <axis xyz="0 1 0" /><limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+  
+  <link name="bL_link_2">
+    <inertial>
+      <origin xyz="-0.1108 0.1487 0.1419" rpy="0 0 0" />
+      <mass value="22.972" />
+      <inertia ixx="14.134" ixy="3.274" ixz="2.479" iyy="12.341" iyz="-5.476" izz="11.471" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_2.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_2.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="bL_joint1" type="revolute">
+    <origin xyz="-0.1247 0.0924 0.2086" rpy="0.58478 -0.10213 0.33637" />
+    <parent link="bL_link_1" />
+    <child link="bL_link_2" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <link name="bL_link_3">
+    <inertial>
+      <origin xyz="-0.0259 -0.1445 0.0394" rpy="0 0 0" />
+      <mass value="5.026" />
+      <inertia ixx="2.513" ixy="-0.275" ixz="0.249" iyy="0.596" iyz="0.471" izz="2.241" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_3.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_3.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="bL_joint2" type="revolute">
+    <origin xyz="-0.0917 0.1487 0.1533" rpy="-1.5826 -0.64796 -0.64086" />
+    <parent link="bL_link_2" />
+    <child link="bL_link_3" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <link name="bL_link_4">
+    <inertial>
+      <origin xyz="-0.0775 -0.7969 0.1371" rpy="0 0 0" />
+      <mass value="7.167" />
+      <inertia ixx="1.176" ixy="-0.023" ixz="-0.189" iyy="1.234" iyz="0.037" izz="1.340" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_4.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_4.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="bL_joint3" type="revolute">
+    <origin xyz="-0.0238 -0.1426 0.0399" rpy="-0.15279 -0.0069803 -0.091129" />
+    <parent link="bL_link_3" />
+    <child link="bL_link_4" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+  
+  <joint name="bR_base_joint" type="fixed">
+    <origin xyz="2.75 -1.825 0" rpy="0 0 -2.356"/> 
+    <parent link="base_link"/><child link="bR_base_link"/>
+  </joint>
+
+  <link name="bR_base_link">
+    <inertial>
+      <origin xyz="-0.6525 0.1616 0.0" rpy="0 0 0" />
+      <mass value="12.168" />
+      <inertia ixx="2.624" ixy="-0.119" ixz="-0.004" iyy="4.218" iyz="0.0002" izz="5.383" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/base_link.STL" scale="3.0 3.0 3.0" /></geometry><material name=""><color rgba="0.792 0.819 0.933 1" /></material></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/base_link.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+  
+  <link name="bR_link_1">
+    <inertial>
+      <origin xyz="-0.1251 0.1844 0.2083" rpy="0 0 0" />
+      <mass value="10.847" />
+      <inertia ixx="7.690" ixy="0.087" ixz="-0.460" iyy="7.518" iyz="-0.149" izz="8.577" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_1.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_1.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="bR_joint0" type="revolute">
+    <origin xyz="-0.3601 -3.0495 0" rpy="1.5708 0 -1.064" />
+    <parent link="bR_base_link" /><child link="bR_link_1" />
+    <axis xyz="0 1 0" /><limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+  
+  <link name="bR_link_2">
+    <inertial>
+      <origin xyz="-0.1108 0.1487 0.1419" rpy="0 0 0" />
+      <mass value="22.972" />
+      <inertia ixx="14.134" ixy="3.274" ixz="2.479" iyy="12.341" iyz="-5.476" izz="11.471" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_2.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_2.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="bR_joint1" type="revolute">
+    <origin xyz="-0.1247 0.0924 0.2086" rpy="0.58478 -0.10213 0.33637" />
+    <parent link="bR_link_1" />
+    <child link="bR_link_2" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <link name="bR_link_3">
+    <inertial>
+      <origin xyz="-0.0259 -0.1445 0.0394" rpy="0 0 0" />
+      <mass value="5.026" />
+      <inertia ixx="2.513" ixy="-0.275" ixz="0.249" iyy="0.596" iyz="0.471" izz="2.241" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_3.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_3.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="bR_joint2" type="revolute">
+    <origin xyz="-0.0917 0.1487 0.1533" rpy="-1.5826 -0.64796 -0.64086" />
+    <parent link="bR_link_2" />
+    <child link="bR_link_3" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <link name="bR_link_4">
+    <inertial>
+      <origin xyz="-0.0775 -0.7969 0.1371" rpy="0 0 0" />
+      <mass value="7.167" />
+      <inertia ixx="1.176" ixy="-0.023" ixz="-0.189" iyy="1.234" iyz="0.037" izz="1.340" />
+    </inertial>
+    <visual><geometry><mesh filename="package://assembly_with_links/meshes/link_4.STL" scale="3.0 3.0 3.0" /></geometry></visual>
+    <collision><geometry><mesh filename="package://assembly_with_links/meshes/link_4.STL" scale="3.0 3.0 3.0" /></geometry></collision>
+  </link>
+
+  <joint name="bR_joint3" type="revolute">
+    <origin xyz="-0.0238 -0.1426 0.0399" rpy="-0.15279 -0.0069803 -0.091129" />
+    <parent link="bR_link_3" />
+    <child link="bR_link_4" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+  
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware><plugin>gazebo_ros2_control/GazeboSystem</plugin></hardware>
+    <joint name="fL_joint0"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="fL_joint1"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="fL_joint2"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="fR_joint0"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="fR_joint1"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="fR_joint2"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="bL_joint0"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="bL_joint1"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="bL_joint2"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="bR_joint0"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="bR_joint1"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="bR_joint2"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+  </ros2_control>
+  
+  <gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <parameters>__CONTROLLER_YAML_PATH__</parameters>
+    </plugin>
+  </gazebo>
+
+</robot>

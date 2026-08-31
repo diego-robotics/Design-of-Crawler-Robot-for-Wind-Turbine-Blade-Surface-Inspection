@@ -1,0 +1,47 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000 # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - fL_joint0
+      - fL_joint1
+      - fL_joint2
+      - fR_joint0
+      - fR_joint1
+      - fR_joint2
+      - bL_joint0
+      - bL_joint1
+      - bL_joint2
+      - bR_joint0
+      - bR_joint1
+      - bR_joint2
+
+    # CRITICAL: This gives the controller the "strength" to move
+    gains:
+      fL_joint0: {p: 100.0, i: 0.1, d: 10.0}
+      fL_joint1: {p: 100.0, i: 0.1, d: 10.0}
+      fL_joint2: {p: 100.0, i: 0.1, d: 10.0}
+      fR_joint0: {p: 100.0, i: 0.1, d: 10.0}
+      fR_joint1: {p: 100.0, i: 0.1, d: 10.0}
+      fR_joint2: {p: 100.0, i: 0.1, d: 10.0}
+      bL_joint0: {p: 100.0, i: 0.1, d: 10.0}
+      bL_joint1: {p: 100.0, i: 0.1, d: 10.0}
+      bL_joint2: {p: 100.0, i: 0.1, d: 10.0}
+      bR_joint0: {p: 100.0, i: 0.1, d: 10.0}
+      bR_joint1: {p: 100.0, i: 0.1, d: 10.0}
+      bR_joint2: {p: 100.0, i: 0.1, d: 10.0}
+
+    
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

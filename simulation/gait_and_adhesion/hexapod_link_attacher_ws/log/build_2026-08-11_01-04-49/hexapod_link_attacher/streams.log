@@ -1,0 +1,30 @@
+[0.019s] Invoking command in '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --build /home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher -- -j8 -l8
+[0.114s] [35m[1mConsolidate compiler generated dependencies of target hexapod_link_attacher[0m
+[0.159s] [ 50%] [32mBuilding CXX object CMakeFiles/hexapod_link_attacher.dir/src/hexapod_link_attacher.cpp.o[0m
+[14.587s] [100%] [32m[1mLinking CXX shared library libhexapod_link_attacher.so[0m
+[15.296s] [100%] Built target hexapod_link_attacher
+[15.316s] Invoked command in '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --build /home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher -- -j8 -l8
+[15.332s] Invoking command in '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --install /home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher
+[15.341s] -- Install configuration: ""
+[15.341s] -- Installing: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib/libhexapod_link_attacher.so
+[15.346s] -- Set runtime path of "/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib/libhexapod_link_attacher.so" to ""
+[15.347s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/library_path.sh
+[15.347s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/library_path.dsv
+[15.347s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/ament_index/resource_index/package_run_dependencies/hexapod_link_attacher
+[15.348s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/ament_index/resource_index/parent_prefix_path/hexapod_link_attacher
+[15.348s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/ament_prefix_path.sh
+[15.348s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/ament_prefix_path.dsv
+[15.348s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/path.sh
+[15.348s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/path.dsv
+[15.348s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/local_setup.bash
+[15.349s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/local_setup.sh
+[15.349s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/local_setup.zsh
+[15.349s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/local_setup.dsv
+[15.349s] -- Installing: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.dsv
+[15.350s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/ament_index/resource_index/packages/hexapod_link_attacher
+[15.350s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/cmake/ament_cmake_export_libraries-extras.cmake
+[15.351s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/cmake/ament_cmake_export_dependencies-extras.cmake
+[15.351s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/cmake/hexapod_link_attacherConfig.cmake
+[15.352s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/cmake/hexapod_link_attacherConfig-version.cmake
+[15.352s] -- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.xml
+[15.352s] Invoked command in '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --install /home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher

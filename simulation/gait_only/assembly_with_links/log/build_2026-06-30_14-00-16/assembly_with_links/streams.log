@@ -1,0 +1,53 @@
+[0.020s] Invoking command in '/home/diego/assembly_with_links/build/assembly_with_links': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake /home/diego/assembly_with_links -DCMAKE_INSTALL_PREFIX=/home/diego/assembly_with_links/install/assembly_with_links
+[0.202s] -- The C compiler identification is GNU 11.4.0
+[0.336s] -- The CXX compiler identification is GNU 11.4.0
+[0.365s] -- Detecting C compiler ABI info
+[0.516s] -- Detecting C compiler ABI info - done
+[0.525s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.526s] -- Detecting C compile features
+[0.526s] -- Detecting C compile features - done
+[0.531s] -- Detecting CXX compiler ABI info
+[0.669s] -- Detecting CXX compiler ABI info - done
+[0.694s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.695s] -- Detecting CXX compile features
+[0.697s] -- Detecting CXX compile features - done
+[0.719s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.928s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.196s] -- Configuring done
+[1.199s] -- Generating done
+[1.201s] -- Build files have been written to: /home/diego/assembly_with_links/build/assembly_with_links
+[1.206s] Invoked command in '/home/diego/assembly_with_links/build/assembly_with_links' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake /home/diego/assembly_with_links -DCMAKE_INSTALL_PREFIX=/home/diego/assembly_with_links/install/assembly_with_links
+[1.208s] Invoking command in '/home/diego/assembly_with_links/build/assembly_with_links': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --build /home/diego/assembly_with_links/build/assembly_with_links -- -j8 -l8
+[1.270s] Invoked command in '/home/diego/assembly_with_links/build/assembly_with_links' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --build /home/diego/assembly_with_links/build/assembly_with_links -- -j8 -l8
+[1.285s] Invoking command in '/home/diego/assembly_with_links/build/assembly_with_links': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --install /home/diego/assembly_with_links/build/assembly_with_links
+[1.294s] -- Install configuration: ""
+[1.294s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/launch
+[1.294s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/launch/display.launch.py
+[1.295s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/launch/gazebo.launch.py
+[1.295s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/urdf
+[1.295s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/urdf/assembly_with_links.urdf
+[1.295s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/meshes
+[1.296s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/meshes/link_3.STL
+[1.296s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/meshes/link_1.STL
+[1.297s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/meshes/base_link.STL
+[1.299s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/meshes/link_2.STL
+[1.302s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/meshes/end_effector.STL
+[1.303s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/meshes/link_4.STL
+[1.304s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/config
+[1.304s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/config/joint_names_assembly_with_links.yaml
+[1.304s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/ament_index/resource_index/package_run_dependencies/assembly_with_links
+[1.304s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/ament_index/resource_index/parent_prefix_path/assembly_with_links
+[1.305s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/environment/ament_prefix_path.sh
+[1.305s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/environment/ament_prefix_path.dsv
+[1.305s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/environment/path.sh
+[1.305s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/environment/path.dsv
+[1.306s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/local_setup.bash
+[1.306s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/local_setup.sh
+[1.306s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/local_setup.zsh
+[1.306s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/local_setup.dsv
+[1.306s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.dsv
+[1.307s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/ament_index/resource_index/packages/assembly_with_links
+[1.307s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/cmake/assembly_with_linksConfig.cmake
+[1.307s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/cmake/assembly_with_linksConfig-version.cmake
+[1.307s] -- Installing: /home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.xml
+[1.310s] Invoked command in '/home/diego/assembly_with_links/build/assembly_with_links' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --install /home/diego/assembly_with_links/build/assembly_with_links

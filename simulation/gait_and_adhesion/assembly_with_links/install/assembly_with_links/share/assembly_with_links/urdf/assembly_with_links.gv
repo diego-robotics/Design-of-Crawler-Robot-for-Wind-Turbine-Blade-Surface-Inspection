@@ -1,0 +1,23 @@
+digraph G {
+node [shape=box];
+"world" [label="world"];
+"base_link" [label="base_link"];
+"link_1" [label="link_1"];
+"link_2" [label="link_2"];
+"link_3" [label="link_3"];
+"link_4" [label="link_4"];
+"end_effector_link" [label="end_effector_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"world" -> "world_to_base" [label="xyz: 0 0 2.5 \nrpy: 0 -0 0"]
+"world_to_base" -> "base_link"
+"base_link" -> "joint0" [label="xyz: 0 0 0 \nrpy: 1.5708 1.11022e-16 -1.0319"]
+"joint0" -> "link_1"
+"link_1" -> "joint1" [label="xyz: -0.041568 0.030814 0.069521 \nrpy: 0.58478 -0.10213 0.33637"]
+"joint1" -> "link_2"
+"link_2" -> "joint2" [label="xyz: -0.030558 0.049573 0.051107 \nrpy: -1.5826 -0.64796 -0.64086"]
+"joint2" -> "link_3"
+"link_3" -> "joint3" [label="xyz: -0.0079476 -0.047541 0.013292 \nrpy: -0.15279 -0.0069803 -0.091129"]
+"joint3" -> "link_4"
+"link_4" -> "end_effector_joint" [label="xyz: -0.0011185 -0.015851 0.0018707 \nrpy: 0.066041 0.87784 -0.085404"]
+"end_effector_joint" -> "end_effector_link"
+}

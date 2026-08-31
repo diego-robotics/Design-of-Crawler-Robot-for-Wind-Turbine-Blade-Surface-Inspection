@@ -1,0 +1,115 @@
+[0.205s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.205s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x72727c45bc10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x72727c45b670>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x72727c45b670>>, mixin_verb=('build',))
+[0.551s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.552s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/diego/hexapod_link_attacher_ws'
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.552s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.579s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'hexapod_link_attacher'
+[0.579s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.579s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.579s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.579s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.580s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.632s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.632s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.647s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/diego/assembly_with_links/install
+[0.648s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/diego/hexapod_link_attacher_ws/install
+[0.649s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/diego/crawler/install
+[0.650s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 11 installed packages in /home/diego/ros_ws/install
+[0.653s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 428 installed packages in /opt/ros/humble
+[0.657s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.753s] Level 5:colcon.colcon_core.verb:set package 'hexapod_link_attacher' build argument 'cmake_args' from command line to 'None'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'hexapod_link_attacher' build argument 'cmake_target' from command line to 'None'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'hexapod_link_attacher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'hexapod_link_attacher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'hexapod_link_attacher' build argument 'cmake_clean_first' from command line to 'False'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'hexapod_link_attacher' build argument 'cmake_force_configure' from command line to 'False'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'hexapod_link_attacher' build argument 'ament_cmake_args' from command line to 'None'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'hexapod_link_attacher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'hexapod_link_attacher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.754s] DEBUG:colcon.colcon_core.verb:Building package 'hexapod_link_attacher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher', 'merge_install': False, 'path': '/home/diego/hexapod_link_attacher_ws', 'symlink_install': False, 'test_result_base': None}
+[0.754s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.756s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.756s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/diego/hexapod_link_attacher_ws' with build type 'ament_cmake'
+[0.756s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/diego/hexapod_link_attacher_ws'
+[0.760s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.760s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.760s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.785s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --build /home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher -- -j8 -l8
+[21.329s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --build /home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher -- -j8 -l8
+[21.353s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --install /home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher
+[21.380s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_link_attacher)
+[21.381s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --install /home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher
+[21.384s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher' for CMake module files
+[21.385s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher' for CMake config files
+[21.385s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_link_attacher', 'cmake_prefix_path')
+[21.385s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/cmake_prefix_path.ps1'
+[21.386s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/cmake_prefix_path.dsv'
+[21.387s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/cmake_prefix_path.sh'
+[21.388s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib'
+[21.389s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_link_attacher', 'ld_library_path_lib')
+[21.389s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/ld_library_path_lib.ps1'
+[21.390s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/ld_library_path_lib.dsv'
+[21.391s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/ld_library_path_lib.sh'
+[21.391s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/bin'
+[21.391s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib/pkgconfig/hexapod_link_attacher.pc'
+[21.392s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib/python3.10/site-packages'
+[21.392s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/bin'
+[21.393s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.ps1'
+[21.395s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.dsv'
+[21.396s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.sh'
+[21.397s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.bash'
+[21.398s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.zsh'
+[21.399s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/colcon-core/packages/hexapod_link_attacher)
+[21.400s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_link_attacher)
+[21.400s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher' for CMake module files
+[21.401s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher' for CMake config files
+[21.401s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_link_attacher', 'cmake_prefix_path')
+[21.402s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/cmake_prefix_path.ps1'
+[21.402s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/cmake_prefix_path.dsv'
+[21.403s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/cmake_prefix_path.sh'
+[21.404s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib'
+[21.404s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_link_attacher', 'ld_library_path_lib')
+[21.404s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/ld_library_path_lib.ps1'
+[21.405s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/ld_library_path_lib.dsv'
+[21.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/hook/ld_library_path_lib.sh'
+[21.406s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/bin'
+[21.406s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib/pkgconfig/hexapod_link_attacher.pc'
+[21.407s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib/python3.10/site-packages'
+[21.407s] Level 1:colcon.colcon_core.environment:checking '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/bin'
+[21.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.ps1'
+[21.409s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.dsv'
+[21.410s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.sh'
+[21.410s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.bash'
+[21.411s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.zsh'
+[21.412s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/colcon-core/packages/hexapod_link_attacher)
+[21.412s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[21.413s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[21.413s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[21.413s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[21.423s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[21.423s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[21.423s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[21.449s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[21.450s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego/hexapod_link_attacher_ws/install/local_setup.ps1'
+[21.454s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/diego/hexapod_link_attacher_ws/install/_local_setup_util_ps1.py'
+[21.460s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego/hexapod_link_attacher_ws/install/setup.ps1'
+[21.468s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego/hexapod_link_attacher_ws/install/local_setup.sh'
+[21.470s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/diego/hexapod_link_attacher_ws/install/_local_setup_util_sh.py'
+[21.471s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego/hexapod_link_attacher_ws/install/setup.sh'
+[21.478s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego/hexapod_link_attacher_ws/install/local_setup.bash'
+[21.479s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego/hexapod_link_attacher_ws/install/setup.bash'
+[21.484s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego/hexapod_link_attacher_ws/install/local_setup.zsh'
+[21.485s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego/hexapod_link_attacher_ws/install/setup.zsh'

@@ -1,0 +1,1595 @@
+<?xml version="1.0" ?>
+<robot name="assembly_with_links">
+  <link name="dummy_root"/>
+  <joint name="dummy_to_base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="dummy_root"/>
+    <child link="base_link"/>
+  </joint>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.130142854706599 -0.0745191293888534 -0.218244697590962" rpy="0 0 0"/>
+      <mass value="0.617804986497515"/>
+      <inertia ixx="0.00381750677083906" ixy="7.82907494958298E-19" ixz="-3.4524450816432E-19" iyy="0.00763336606171414" iyz="3.90323134352822E-17" izz="0.00381750677083907"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/base_link.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/base_link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- LEG 1 -->
+  <link name="1-l1">
+    <inertial>
+      <origin xyz="0.0315384507792102 0.0218898776936711 -0.0139988511214316" rpy="0 0 0"/>
+      <mass value="0.056333242497719"/>
+      <inertia ixx="0.000107999" ixy="-4.89265827083458E-07" ixz="-1.77481531740563E-11" iyy="0.000173567" iyz="1.29504177542992E-09" izz="0.000221556"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l1.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l1.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="1-j0" type="fixed">
+    <origin xyz="-0.085668 0.14768 -0.092869" rpy="1.5708 0 0.25431"/>
+    <parent link="base_link"/>
+    <child link="1-l1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="1-l2">
+    <inertial>
+      <origin xyz="0.0428286958205586 -8.35328054862305E-05 -0.0215792143296928" rpy="0 0 0"/>
+      <mass value="0.0502183751941384"/>
+      <inertia ixx="0.000316475" ixy="3.56838850150238E-07" ixz="-1.89572192688985E-06" iyy="0.000309382" iyz="-6.13284228386118E-07" izz="0.000352953"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l2.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l2.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="1-j1" type="revolute">
+    <origin xyz="0.02025 0 -0.014" rpy="1.5708 0 2.1097"/>
+    <parent link="1-l1"/>
+    <child link="1-l2"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="2.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="1-l3">
+    <inertial>
+      <origin xyz="-0.0184623151565287 0.0247864385414815 0.0236499429926842" rpy="0 0 0"/>
+      <mass value="0.10635493323768"/>
+      <inertia ixx="0.00058168" ixy="1.34734051802891E-05" ixz="1.02008578223501E-05" iyy="0.00050786" iyz="-2.25336498003153E-05" izz="0.00047206"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l3.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l3.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="1-j2" type="revolute">
+    <origin xyz="0.063684 0 -0.056297" rpy="-2.9611 -0.5317 1.4785"/>
+    <parent link="1-l2"/>
+    <child link="1-l3"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="4.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="1-l4">
+    <inertial>
+      <origin xyz="0.0403707038365743 -0.000196767058694647 -2.46067055620358E-13" rpy="0 0 0"/>
+      <mass value="0.0331674838183587"/>
+      <inertia ixx="0.00024866" ixy="-3.52639193330523E-08" ixz="1.44520573713236E-16" iyy="0.00028451" iyz="2.17420549882877E-19" izz="0.00026128"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l4.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l4.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="1-j3" type="revolute">
+    <origin xyz="-0.030558 0.049573 0.051107" rpy="2.39 -0.7203 2.1232"/>
+    <parent link="1-l3"/>
+    <child link="1-l4"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="3.5" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="1-l5">
+    <inertial>
+      <origin xyz="1.1236399685699E-08 1.98316307820079E-10 0.000131645229857341" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l5.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l5.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="1-j4" type="fixed">
+    <origin xyz="0.08 0 0" rpy="1.5708 1.5708 3.14159"/>
+    <parent link="1-l4"/>
+    <child link="1-l5"/>
+  </joint>
+  <link name="1-l6">
+    <inertial>
+      <origin xyz="1.52472603986986E-10 -0.0380647191395356 0.000131653080785082" rpy="0 0 0"/>
+      <mass value="0.8"/>
+      <inertia ixx="0.008" ixy="0.0" ixz="0.0" iyy="0.008" iyz="0.0" izz="0.008"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l6.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <!-- Restored: the collision-removal here was an isolated test for
+         whether gazebo_ros_vacuum_gripper needed unobstructed overlap to
+         detect grasp proximity. It didn't change the outcome (leg 1 still
+         failed identically to every other leg), and we've since moved off
+         vacuum_gripper entirely in favour of hexapod_link_attacher, so
+         this link needs its normal physical collision back for standing/
+         walking support. -->
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/1-l6.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="1-j5" type="fixed">
+    <origin xyz="0 0.01 0" rpy="0 0 0"/>
+    <parent link="1-l5"/>
+    <child link="1-l6"/>
+  </joint>
+
+  <!-- LEG 2 -->
+  <link name="2-l1">
+    <inertial>
+      <origin xyz="0.0315384528725566 0.0218898782962894 -0.0139988507941314" rpy="0 0 0"/>
+      <mass value="0.0563332337355874"/>
+      <inertia ixx="0.000107999" ixy="-4.89264364198371E-07" ixz="-1.67605750159617E-11" iyy="0.000173567" iyz="1.29558742115121E-09" izz="0.000221556"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l1.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l1.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="2-j0" type="fixed">
+    <origin xyz="0.083346 -0.0039347 -0.092869" rpy="1.5708 0 1.3015"/>
+    <parent link="base_link"/>
+    <child link="2-l1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="2-l2">
+    <inertial>
+      <origin xyz="0.0428286958205587 -8.35328054862583E-05 -0.0215792143296928" rpy="0 0 0"/>
+      <mass value="0.0502183751941383"/>
+      <inertia ixx="0.000316475" ixy="3.56838850150227E-07" ixz="-1.89572192688986E-06" iyy="0.000309382" iyz="-6.13284228386115E-07" izz="0.000352953"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l2.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l2.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="2-j1" type="revolute">
+    <origin xyz="0.02025 0 -0.014" rpy="1.5708 0 2.1097"/>
+    <parent link="2-l1"/>
+    <child link="2-l2"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="2.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="2-l3">
+    <inertial>
+      <origin xyz="-0.0184623120102433 0.0247864308505101 0.0236499348091244" rpy="0 0 0"/>
+      <mass value="0.10635495928949"/>
+      <inertia ixx="0.00058168" ixy="1.34734016146637E-05" ixz="1.02008537344369E-05" iyy="0.00050786" iyz="-2.2533655254364E-05" izz="0.00047206"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l3.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l3.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="2-j2" type="revolute">
+    <origin xyz="0.063684 0 -0.056297" rpy="-2.9611 -0.5317 1.4785"/>
+    <parent link="2-l2"/>
+    <child link="2-l3"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="4.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="2-l4">
+    <inertial>
+      <origin xyz="0.0403707038365728 -0.000196767058694258 -2.65065747129256E-15" rpy="0 0 0"/>
+      <mass value="0.0331674838183588"/>
+      <inertia ixx="0.00024866" ixy="-3.52639193330354E-08" ixz="-2.82015115962484E-20" iyy="0.00028451" iyz="4.57246025502564E-22" izz="0.00026128"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l4.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l4.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="2-j3" type="revolute">
+    <origin xyz="-0.030558 0.049573 0.051107" rpy="2.39 -0.7203 2.1232"/>
+    <parent link="2-l3"/>
+    <child link="2-l4"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="3.5" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="2-l5">
+    <inertial>
+      <origin xyz="1.23520045025582E-08 5.55111512312578E-17 0.00013164524225967" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l5.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l5.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="2-j4" type="fixed">
+    <origin xyz="0.08 0 0" rpy="1.5708 1.5708 3.14159"/>
+    <parent link="2-l4"/>
+    <child link="2-l5"/>
+  </joint>
+  <link name="2-l6">
+    <inertial>
+      <origin xyz="6.82945228147602E-11 -0.0380647192657287 0.000131653086026848" rpy="0 0 0"/>
+      <mass value="0.8"/>
+      <inertia ixx="0.008" ixy="0.0" ixz="0.0" iyy="0.008" iyz="0.0" izz="0.008"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l6.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/2-l6.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="2-j5" type="fixed">
+    <origin xyz="0 0.01 0" rpy="0 0 0"/>
+    <parent link="2-l5"/>
+    <child link="2-l6"/>
+  </joint>
+
+  <!-- LEG 3 -->
+  <link name="3-l1">
+    <inertial>
+      <origin xyz="0.0315384481251577 0.0218898780819403 -0.0139988505226491" rpy="0 0 0"/>
+      <mass value="0.0563332333801726"/>
+      <inertia ixx="0.000107999" ixy="-4.89267326233347E-07" ixz="-1.88413212766859E-11" iyy="0.000173567" iyz="1.29581980145359E-09" izz="0.000221556"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l1.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l1.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="3-j0" type="fixed">
+    <origin xyz="0.29916 0.066628 -0.092869" rpy="1.5708 0 2.3487"/>
+    <parent link="base_link"/>
+    <child link="3-l1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="3-l2">
+    <inertial>
+      <origin xyz="0.042828695820559 -8.35328054862028E-05 -0.0215792143296926" rpy="0 0 0"/>
+      <mass value="0.0502183751941383"/>
+      <inertia ixx="0.000316475" ixy="3.56838850150238E-07" ixz="-1.89572192688984E-06" iyy="0.000309382" iyz="-6.13284228386125E-07" izz="0.000352953"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l2.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l2.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="3-j1" type="revolute">
+    <origin xyz="0.02025 0 -0.014" rpy="1.5708 0 2.1097"/>
+    <parent link="3-l1"/>
+    <child link="3-l2"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="2.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="3-l3">
+    <inertial>
+      <origin xyz="0.012095585520481 -0.0247864434203375 -0.0274567695812491" rpy="0 0 0"/>
+      <mass value="0.106354970786771"/>
+      <inertia ixx="0.00058168" ixy="1.34734024072001E-05" ixz="1.02008549390725E-05" iyy="0.00050786" iyz="-2.25336560719615E-05" izz="0.00047206"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l3.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l3.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="3-j2" type="revolute">
+    <origin xyz="0.063684 0 -0.056297" rpy="0.180437 0.531697 1.662973"/>
+    <parent link="3-l2"/>
+    <child link="3-l3"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="4.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="3-l4">
+    <inertial>
+      <origin xyz="0.0403707038 -0.000196767058693981 1.36987643450937e-13" rpy="0 0 0"/>
+      <mass value="0.0331674838183587"/>
+      <inertia ixx="0.00024866" ixy="-3.52639193330545E-08" ixz="8.12039270580865E-17" iyy="0.00028451" iyz="1.34172151979328E-19" izz="0.00026128"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.08 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l4.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.08 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l4.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="3-j3" type="revolute">
+    <origin xyz="0.030559 -0.049570 -0.051109" rpy="0.751539 0.720341 -1.018358"/>
+    <parent link="3-l3"/>
+    <child link="3-l4"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="3.5" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="3-l5">
+    <inertial>
+      <origin xyz="1.11752935516574e-08 -9.1490093279134e-11 0.0001316443" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.01" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l5.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.01" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l5.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="3-j4" type="fixed">
+    <origin xyz="0.08 0 0" rpy="1.5708 1.5708 3.14159"/>
+    <parent link="3-l4"/>
+    <child link="3-l5"/>
+  </joint>
+  <link name="3-l6">
+    <inertial>
+      <origin xyz="2.89155657751117E-10 -0.0380647194348782 0.000131653045029934" rpy="0 0 0"/>
+      <mass value="0.8"/>
+      <inertia ixx="0.008" ixy="0.0" ixz="0.0" iyy="0.008" iyz="0.0" izz="0.008"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l6.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/3-l6.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="3-j5" type="fixed">
+    <origin xyz="0 0.01 0" rpy="0 0 0"/>
+    <parent link="3-l5"/>
+    <child link="3-l6"/>
+  </joint>
+
+  <!-- LEG 4 -->
+  <link name="4-l1">
+    <inertial>
+      <origin xyz="0.0315384528915226 0.0218898780183968 -0.0139988500992722" rpy="0 0 0"/>
+      <mass value="0.0563332358156894"/>
+      <inertia ixx="0.000107999" ixy="-4.89264664596269E-07" ixz="-1.67740718759007E-11" iyy="0.000173567" iyz="1.29566534178554E-09" izz="0.000221556"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l1.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l1.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="4-j0" type="fixed">
+    <origin xyz="0.34595 0.28881 -0.092869" rpy="1.5708 0 -2.8873"/>
+    <parent link="base_link"/>
+    <child link="4-l1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="4-l2">
+    <inertial>
+      <origin xyz="0.0428286958205603 -8.3532805486175E-05 -0.0215792143296919" rpy="0 0 0"/>
+      <mass value="0.0502183751941384"/>
+      <inertia ixx="0.000316475" ixy="3.56838850150232E-07" ixz="-1.89572192688984E-06" iyy="0.000309382" iyz="-6.13284228386126E-07" izz="0.000352953"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l2.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l2.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="4-j1" type="revolute">
+    <origin xyz="0.02025 0 -0.014" rpy="1.5708 0 2.1097"/>
+    <parent link="4-l1"/>
+    <child link="4-l2"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="2.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="4-l3">
+    <inertial>
+      <origin xyz="-0.0184623140786378 0.0247864351983001 0.0236499386767438" rpy="0 0 0"/>
+      <mass value="0.106354953334454"/>
+      <inertia ixx="0.00058168" ixy="1.34734021629794E-05" ixz="1.02008540105952E-05" iyy="0.00050786" iyz="-2.25336541230667E-05" izz="0.00047206"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l3.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l3.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="4-j2" type="revolute">
+    <origin xyz="0.063684 0 -0.056297" rpy="-2.9611 -0.5317 1.4785"/>
+    <parent link="4-l2"/>
+    <child link="4-l3"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="4.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="4-l4">
+    <inertial>
+      <origin xyz="0.0403707038365758 -0.000196767058694897 -1.13936637902157E-13" rpy="0 0 0"/>
+      <mass value="0.0331674838183587"/>
+      <inertia ixx="0.00024866" ixy="-3.52639193330182E-08" ixz="6.65777843243225E-17" iyy="0.00028451" iyz="1.80099453286051E-18" izz="0.00026128"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l4.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l4.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="4-j3" type="revolute">
+    <origin xyz="-0.030558 0.049573 0.051107" rpy="2.39 -0.7203 2.1232"/>
+    <parent link="4-l3"/>
+    <child link="4-l4"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="3.5" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="4-l5">
+    <inertial>
+      <origin xyz="1.06387112869255E-08 -1.69654734705205E-10 0.000131644652828639" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l5.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l5.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="4-j4" type="fixed">
+    <origin xyz="0.08 0 0" rpy="1.5708 1.5708 3.14159"/>
+    <parent link="4-l4"/>
+    <child link="4-l5"/>
+  </joint>
+  <link name="4-l6">
+    <inertial>
+      <origin xyz="1.73280764736994E-10 -0.0380647189496363 0.000131653065139403" rpy="0 0 0"/>
+      <mass value="0.8"/>
+      <inertia ixx="0.008" ixy="0.0" ixz="0.0" iyy="0.008" iyz="0.0" izz="0.008"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l6.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/4-l6.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="4-j5" type="fixed">
+    <origin xyz="0 0.01 0" rpy="0 0 0"/>
+    <parent link="4-l5"/>
+    <child link="4-l6"/>
+  </joint>
+
+  <!-- LEG 5 -->
+  <link name="5-l1">
+    <inertial>
+      <origin xyz="0.0315384487740192 0.02188987835501 -0.0139988506161635" rpy="0 0 0"/>
+      <mass value="0.0563332326513514"/>
+      <inertia ixx="0.000107999" ixy="-4.89266913825921E-07" ixz="-1.88478412924686E-11" iyy="0.000173567" iyz="1.29569767483996E-09" izz="0.000221556"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l1.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l1.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="5-j0" type="fixed">
+    <origin xyz="0.17694 0.44042 -0.092869" rpy="1.5708 0 -1.8401"/>
+    <parent link="base_link"/>
+    <child link="5-l1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="5-l2">
+    <inertial>
+      <origin xyz="0.0428286958205596 -8.35328054862722E-05 -0.0215792143296922" rpy="0 0 0"/>
+      <mass value="0.0502183751941384"/>
+      <inertia ixx="0.000316475" ixy="3.56838850150228E-07" ixz="-1.89572192688985E-06" iyy="0.000309382" iyz="-6.13284228386124E-07" izz="0.000352953"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l2.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l2.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="5-j1" type="revolute">
+    <origin xyz="0.02025 0 -0.014" rpy="1.5708 0 2.1097"/>
+    <parent link="5-l1"/>
+    <child link="5-l2"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="2.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="5-l3">
+    <inertial>
+      <origin xyz="-0.0184623138575806 0.0247864361420115 0.0236499404876879" rpy="0 0 0"/>
+      <mass value="0.106354935486211"/>
+      <inertia ixx="0.00058168" ixy="1.34734051120569E-05" ixz="1.02008577670581E-05" iyy="0.00050786" iyz="-2.2533649961617E-05" izz="0.00047206"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l3.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l3.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="5-j2" type="revolute">
+    <origin xyz="0.063684 0 -0.056297" rpy="-2.9611 -0.5317 1.4785"/>
+    <parent link="5-l2"/>
+    <child link="5-l3"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="4.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="5-l4">
+    <inertial>
+      <origin xyz="0.0403707038365907 -0.000196767058691788 3.36050631766227E-13" rpy="0 0 0"/>
+      <mass value="0.0331674838183586"/>
+      <inertia ixx="0.00024866" ixy="-3.52639193329673E-08" ixz="-1.5489976026232E-16" iyy="0.00028451" iyz="-2.32736874022805E-19" izz="0.00026128"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l4.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l4.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="5-j3" type="revolute">
+    <origin xyz="-0.030558 0.049573 0.051107" rpy="2.39 -0.7203 2.1232"/>
+    <parent link="5-l3"/>
+    <child link="5-l4"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="3.5" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="5-l5">
+    <inertial>
+      <origin xyz="1.00686592535704E-08 2.87599943860073E-11 0.000131645241435385" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l5.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l5.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="5-j4" type="fixed">
+    <origin xyz="0.08 0 0" rpy="1.5708 1.5708 3.14159"/>
+    <parent link="5-l4"/>
+    <child link="5-l5"/>
+  </joint>
+  <link name="5-l6">
+    <inertial>
+      <origin xyz="2.38218056392014E-11 -0.0380647186703184 0.000131653051344466" rpy="0 0 0"/>
+      <mass value="0.8"/>
+      <inertia ixx="0.008" ixy="0.0" ixz="0.0" iyy="0.008" iyz="0.0" izz="0.008"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l6.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/5-l6.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="5-j5" type="fixed">
+    <origin xyz="0 0.01 0" rpy="0 0 0"/>
+    <parent link="5-l5"/>
+    <child link="5-l6"/>
+  </joint>
+
+  <!-- LEG 6 -->
+  <link name="6-l1">
+    <inertial>
+      <origin xyz="0.031538448130819 0.0218898780815583 -0.013998850521546" rpy="0 0 0"/>
+      <mass value="0.0563332333837669"/>
+      <inertia ixx="0.000107999" ixy="-4.8926732139146E-07" ixz="-1.88405487263103E-11" iyy="0.000173567" iyz="1.29582072000762E-09" izz="0.000221556"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l1.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l1.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6-j0" type="fixed">
+    <origin xyz="-0.038872 0.36986 -0.092869" rpy="1.5708 0 -0.79289"/>
+    <parent link="base_link"/>
+    <child link="6-l1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="6-l2">
+    <inertial>
+      <origin xyz="0.0428286958205586 -8.35328054863138E-05 -0.0215792143296928" rpy="0 0 0"/>
+      <mass value="0.0502183751941384"/>
+      <inertia ixx="0.000316475" ixy="3.5683885015023E-07" ixz="-1.89572192688985E-06" iyy="0.000309382" iyz="-6.13284228386117E-07" izz="0.000352953"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l2.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l2.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6-j1" type="revolute">
+    <origin xyz="0.02025 0 -0.014" rpy="1.5708 0 2.1097"/>
+    <parent link="6-l1"/>
+    <child link="6-l2"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="2.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="6-l3">
+    <inertial>
+      <origin xyz="0.0120955856047243 -0.0247864447785589 -0.0274567701967158" rpy="0 0 0"/>
+      <mass value="0.106354978249227"/>
+      <inertia ixx="0.00058168" ixy="1.34734027485741E-05" ixz="1.02008563286007E-05" iyy="0.00050786" iyz="-2.25336563240688E-05" izz="0.00047206"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l3.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l3.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6-j2" type="revolute">
+    <origin xyz="0.063684 0 -0.056297" rpy="0.180437 0.531697 1.662973"/>
+    <parent link="6-l2"/>
+    <child link="6-l3"/>
+    <axis xyz="0.85828 0 0.51318"/>
+    <limit lower="-1.57" upper="1.57" effort="4.0" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="6-l4">
+    <inertial>
+      <origin xyz="0.0403707038 -0.000196767058696035 -9.71445146547012e-17" rpy="0 0 0"/>
+      <mass value="0.0331674838183587"/>
+      <inertia ixx="0.00024866" ixy="-3.52639193329672E-08" ixz="-5.30678776856238E-20" iyy="0.00028451" iyz="1.15598068445121E-21" izz="0.00026128"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.08 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l4.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.84 0.0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.08 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l4.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6-j3" type="revolute">
+    <origin xyz="0.030559 -0.049570 -0.051109" rpy="0.751539 0.720341 -1.018358"/>
+    <parent link="6-l3"/>
+    <child link="6-l4"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="3.5" velocity="5.0"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+  <link name="6-l5">
+    <inertial>
+      <origin xyz="1.11973711969249e-08 -1.41032518996553e-10 0.0001316444" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.01" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l5.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.01" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l5.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6-j4" type="fixed">
+    <origin xyz="0.08 0 0" rpy="1.5708 1.5708 3.14159"/>
+    <parent link="6-l4"/>
+    <child link="6-l5"/>
+  </joint>
+  <link name="6-l6">
+    <inertial>
+      <origin xyz="7.13264169949213E-11 -0.0380647192652454 0.00013165304461607" rpy="0 0 0"/>
+      <mass value="0.8"/>
+      <inertia ixx="0.008" ixy="0.0" ixz="0.0" iyy="0.008" iyz="0.0" izz="0.008"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l6.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.03 0.03 0.03 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assembly_with_links/meshes/6-l6.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6-j5" type="fixed">
+    <origin xyz="0 0.01 0" rpy="0 0 0"/>
+    <parent link="6-l5"/>
+    <child link="6-l6"/>
+  </joint>
+  
+  
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    
+    <!-- Controlled Joints (j1, j2, j3 for all 6 legs) -->
+    <joint name="1-j1">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="1-j2">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="1-j3">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="2-j1">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="2-j2">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="2-j3">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="3-j1">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="3-j2">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="3-j3">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="4-j1">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="4-j2">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="4-j3">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="5-j1">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="5-j2">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="5-j3">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="6-j1">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="6-j2">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="6-j3">
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.8</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+  </ros2_control>
+  <gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <parameters>__CONTROLLER_YAML_PATH__</parameters>
+    </plugin>
+  </gazebo>
+
+  <!-- Suction cup adhesion is handled entirely by six independent
+       hexapod_link_attacher plugin instances declared in
+       crawler_hexapod.world (world-level plugins, not per-link URDF
+       blocks like vacuum_gripper needed); see that file for details. -->
+
+  <!-- Suction adhesion physics removed ahead of a presentation deadline
+       to isolate and validate the tripod gait alone first; see chat
+       history / prior world+launch files for the hexapod_link_attacher
+       based version once gait is confirmed solid. -->
+
+  <!-- Gazebo Classic does not reliably read URDF material/color tags
+       (a well-documented limitation; it uses OGRE material scripts
+       instead). The <material><color> tags on each link above are
+       kept for RViz, which DOES read them; these <gazebo reference>
+       blocks are what actually colors things in Gazebo itself. -->
+  <gazebo reference="base_link">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="1-l1">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="1-l2">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="1-l3">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="1-l4">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="1-l5">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="1-l6">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="2-l1">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="2-l2">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="2-l3">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="2-l4">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="2-l5">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="2-l6">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="3-l1">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="3-l2">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="3-l3">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="3-l4">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="3-l5">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="3-l6">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="4-l1">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="4-l2">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="4-l3">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="4-l4">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="4-l5">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="4-l6">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="5-l1">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="5-l2">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="5-l3">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="5-l4">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="5-l5">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="5-l6">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="6-l1">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="6-l2">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="6-l3">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="6-l4">
+    <visual>
+      <material>
+        <ambient>1.0 0.84 0.0 1</ambient>
+        <diffuse>1.0 0.84 0.0 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="6-l5">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="6-l6">
+    <visual>
+      <material>
+        <ambient>0.03 0.03 0.03 1</ambient>
+        <diffuse>0.03 0.03 0.03 1</diffuse>
+        <specular>0.3 0.3 0.3 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+</robot>

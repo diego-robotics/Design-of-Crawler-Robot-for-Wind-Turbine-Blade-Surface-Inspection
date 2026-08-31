@@ -1,0 +1,104 @@
+[0.269s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.269s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f5e83a6bc40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f5e83a6b6a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f5e83a6b6a0>>, mixin_verb=('build',))
+[0.682s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.683s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.683s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.683s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.683s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.683s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.683s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/diego/assembly_with_links'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.712s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'assembly_with_links'
+[0.712s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.712s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.712s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.712s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.712s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.772s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.772s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.777s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/diego/hexapod_link_attacher_ws/install
+[0.778s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/diego/crawler/install
+[0.779s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 11 installed packages in /home/diego/ros_ws/install
+[0.783s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 428 installed packages in /opt/ros/humble
+[0.787s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.886s] Level 5:colcon.colcon_core.verb:set package 'assembly_with_links' build argument 'cmake_args' from command line to 'None'
+[0.886s] Level 5:colcon.colcon_core.verb:set package 'assembly_with_links' build argument 'cmake_target' from command line to 'None'
+[0.886s] Level 5:colcon.colcon_core.verb:set package 'assembly_with_links' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.887s] Level 5:colcon.colcon_core.verb:set package 'assembly_with_links' build argument 'cmake_clean_cache' from command line to 'False'
+[0.887s] Level 5:colcon.colcon_core.verb:set package 'assembly_with_links' build argument 'cmake_clean_first' from command line to 'False'
+[0.887s] Level 5:colcon.colcon_core.verb:set package 'assembly_with_links' build argument 'cmake_force_configure' from command line to 'False'
+[0.887s] Level 5:colcon.colcon_core.verb:set package 'assembly_with_links' build argument 'ament_cmake_args' from command line to 'None'
+[0.887s] Level 5:colcon.colcon_core.verb:set package 'assembly_with_links' build argument 'catkin_cmake_args' from command line to 'None'
+[0.887s] Level 5:colcon.colcon_core.verb:set package 'assembly_with_links' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.887s] DEBUG:colcon.colcon_core.verb:Building package 'assembly_with_links' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/diego/assembly_with_links/build/assembly_with_links', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/diego/assembly_with_links/install/assembly_with_links', 'merge_install': False, 'path': '/home/diego/assembly_with_links', 'symlink_install': False, 'test_result_base': None}
+[0.887s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.889s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.889s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/diego/assembly_with_links' with build type 'ament_cmake'
+[0.889s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/diego/assembly_with_links'
+[0.895s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.895s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.895s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.921s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/diego/assembly_with_links/build/assembly_with_links': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --build /home/diego/assembly_with_links/build/assembly_with_links -- -j8 -l8
+[1.018s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/diego/assembly_with_links/build/assembly_with_links' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --build /home/diego/assembly_with_links/build/assembly_with_links -- -j8 -l8
+[1.049s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/diego/assembly_with_links/build/assembly_with_links': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --install /home/diego/assembly_with_links/build/assembly_with_links
+[1.080s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(assembly_with_links)
+[1.081s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/diego/assembly_with_links/build/assembly_with_links' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble /usr/bin/cmake --install /home/diego/assembly_with_links/build/assembly_with_links
+[1.085s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links' for CMake module files
+[1.086s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links' for CMake config files
+[1.087s] Level 1:colcon.colcon_core.shell:create_environment_hook('assembly_with_links', 'cmake_prefix_path')
+[1.087s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/hook/cmake_prefix_path.ps1'
+[1.090s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/hook/cmake_prefix_path.dsv'
+[1.091s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/hook/cmake_prefix_path.sh'
+[1.093s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links/bin'
+[1.093s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links/lib/pkgconfig/assembly_with_links.pc'
+[1.094s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links/lib/python3.10/site-packages'
+[1.095s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links/bin'
+[1.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.ps1'
+[1.099s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.dsv'
+[1.100s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.sh'
+[1.102s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.bash'
+[1.104s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.zsh'
+[1.105s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/diego/assembly_with_links/install/assembly_with_links/share/colcon-core/packages/assembly_with_links)
+[1.107s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(assembly_with_links)
+[1.108s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links' for CMake module files
+[1.109s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links' for CMake config files
+[1.110s] Level 1:colcon.colcon_core.shell:create_environment_hook('assembly_with_links', 'cmake_prefix_path')
+[1.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/hook/cmake_prefix_path.ps1'
+[1.112s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/hook/cmake_prefix_path.dsv'
+[1.113s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/hook/cmake_prefix_path.sh'
+[1.114s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links/bin'
+[1.114s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links/lib/pkgconfig/assembly_with_links.pc'
+[1.115s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links/lib/python3.10/site-packages'
+[1.115s] Level 1:colcon.colcon_core.environment:checking '/home/diego/assembly_with_links/install/assembly_with_links/bin'
+[1.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.ps1'
+[1.118s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.dsv'
+[1.119s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.sh'
+[1.121s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.bash'
+[1.123s] INFO:colcon.colcon_core.shell:Creating package script '/home/diego/assembly_with_links/install/assembly_with_links/share/assembly_with_links/package.zsh'
+[1.125s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/diego/assembly_with_links/install/assembly_with_links/share/colcon-core/packages/assembly_with_links)
+[1.125s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.126s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.126s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.126s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.135s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.135s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.135s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.162s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.163s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego/assembly_with_links/install/local_setup.ps1'
+[1.166s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/diego/assembly_with_links/install/_local_setup_util_ps1.py'
+[1.170s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego/assembly_with_links/install/setup.ps1'
+[1.176s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego/assembly_with_links/install/local_setup.sh'
+[1.178s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/diego/assembly_with_links/install/_local_setup_util_sh.py'
+[1.180s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego/assembly_with_links/install/setup.sh'
+[1.186s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego/assembly_with_links/install/local_setup.bash'
+[1.187s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego/assembly_with_links/install/setup.bash'
+[1.190s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diego/assembly_with_links/install/local_setup.zsh'
+[1.191s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diego/assembly_with_links/install/setup.zsh'

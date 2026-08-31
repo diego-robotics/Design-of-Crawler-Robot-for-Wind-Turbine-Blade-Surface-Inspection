@@ -1,0 +1,243 @@
+[0.000000] (-) TimerEvent: {}
+[0.000461] (hexapod_link_attacher) JobQueued: {'identifier': 'hexapod_link_attacher', 'dependencies': OrderedDict()}
+[0.000746] (hexapod_link_attacher) JobStarted: {'identifier': 'hexapod_link_attacher'}
+[0.021007] (hexapod_link_attacher) JobProgress: {'identifier': 'hexapod_link_attacher', 'progress': 'cmake'}
+[0.022267] (hexapod_link_attacher) JobProgress: {'identifier': 'hexapod_link_attacher', 'progress': 'build'}
+[0.023503] (hexapod_link_attacher) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher', '--', '-j8', '-l8'], 'cwd': '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GZ_SIM_RESOURCE_PATH', '/home/diego/ros_ws/install/rover_gazebo/share/rover_gazebo/models:/home/diego/ros_ws/install/rover_gazebo/share/rover_gazebo/worlds:/home/diego/ros_ws/install/rover_description/share'), ('LANGUAGE', 'en_GB:en'), ('USER', 'diego'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib:/home/diego/ros_ws/install/rover_msgs/lib:/home/diego/ros_ws/install/custom_teleop_twist_joy/lib:/home/diego/crawler/install/ros2_linkattacher/lib:/home/diego/crawler/install/linkattacher_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/diego'), ('OLDPWD', '/home/diego/assembly_with_links'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1903'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/diego/assembly_with_links/install:/home/diego/hexapod_link_attacher_ws/install:/home/diego/crawler/install:/home/diego/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'diego'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'diego'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/diego/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/diego-NBLK-WAX9X:@/tmp/.ICE-unix/1884,unix/diego-NBLK-WAX9X:/tmp/.ICE-unix/1884'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b63ac390_835a_4ba1_8bdd_a490a0acce96'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.C4QVT3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/diego/assembly_with_links/install/assembly_with_links:/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_navigation:/home/diego/ros_ws/install/rover_gazebo:/home/diego/ros_ws/install/rover_bringup:/home/diego/ros_ws/install/rover_motor_controller_cpp:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/rover_msgs:/home/diego/ros_ws/install/rover_localization:/home/diego/ros_ws/install/rover_description:/home/diego/ros_ws/install/custom_teleop_twist_joy:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/ros2_linkattacher:/home/diego/crawler/install/robot_sim:/home/diego/crawler/install/linkattacher_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/diego/ros_ws/install/rover_teleop/lib/python3.10/site-packages:/home/diego/ros_ws/install/rover_motor_controller/lib/python3.10/site-packages:/home/diego/ros_ws/install/rover_msgs/local/lib/python3.10/dist-packages:/home/diego/ros_ws/install/crimsonbot/lib/python3.10/site-packages:/home/diego/crawler/install/robot_sim/lib/python3.10/site-packages:/home/diego/crawler/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/diego/assembly_with_links/install/assembly_with_links:/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher:/home/diego/ros_ws/install/rover_navigation:/home/diego/ros_ws/install/rover_gazebo:/home/diego/ros_ws/install/rover_bringup:/home/diego/ros_ws/install/rover_motor_controller_cpp:/home/diego/ros_ws/install/rover_msgs:/home/diego/ros_ws/install/rover_localization:/home/diego/ros_ws/install/rover_description:/home/diego/ros_ws/install/custom_teleop_twist_joy:/home/diego/crawler/install/ros2_linkattacher:/home/diego/crawler/install/linkattacher_msgs:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble')]), 'shell': False}
+[0.098588] (-) TimerEvent: {}
+[0.143720] (hexapod_link_attacher) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target hexapod_link_attacher\x1b[0m\n'}
+[0.198732] (-) TimerEvent: {}
+[0.213177] (hexapod_link_attacher) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/hexapod_link_attacher.dir/src/hexapod_link_attacher.cpp.o\x1b[0m\n'}
+[0.298900] (-) TimerEvent: {}
+[0.399403] (-) TimerEvent: {}
+[0.500174] (-) TimerEvent: {}
+[0.600752] (-) TimerEvent: {}
+[0.701303] (-) TimerEvent: {}
+[0.801833] (-) TimerEvent: {}
+[0.902688] (-) TimerEvent: {}
+[1.003235] (-) TimerEvent: {}
+[1.103786] (-) TimerEvent: {}
+[1.204292] (-) TimerEvent: {}
+[1.304836] (-) TimerEvent: {}
+[1.405344] (-) TimerEvent: {}
+[1.505876] (-) TimerEvent: {}
+[1.606385] (-) TimerEvent: {}
+[1.706929] (-) TimerEvent: {}
+[1.807439] (-) TimerEvent: {}
+[1.907983] (-) TimerEvent: {}
+[2.008514] (-) TimerEvent: {}
+[2.109000] (-) TimerEvent: {}
+[2.209418] (-) TimerEvent: {}
+[2.309862] (-) TimerEvent: {}
+[2.410391] (-) TimerEvent: {}
+[2.510936] (-) TimerEvent: {}
+[2.611367] (-) TimerEvent: {}
+[2.712092] (-) TimerEvent: {}
+[2.812750] (-) TimerEvent: {}
+[2.913263] (-) TimerEvent: {}
+[3.013816] (-) TimerEvent: {}
+[3.114343] (-) TimerEvent: {}
+[3.214945] (-) TimerEvent: {}
+[3.315454] (-) TimerEvent: {}
+[3.416022] (-) TimerEvent: {}
+[3.516556] (-) TimerEvent: {}
+[3.617045] (-) TimerEvent: {}
+[3.717552] (-) TimerEvent: {}
+[3.818049] (-) TimerEvent: {}
+[3.918443] (-) TimerEvent: {}
+[4.018972] (-) TimerEvent: {}
+[4.119521] (-) TimerEvent: {}
+[4.220054] (-) TimerEvent: {}
+[4.320590] (-) TimerEvent: {}
+[4.421176] (-) TimerEvent: {}
+[4.521735] (-) TimerEvent: {}
+[4.622263] (-) TimerEvent: {}
+[4.722788] (-) TimerEvent: {}
+[4.823314] (-) TimerEvent: {}
+[4.923843] (-) TimerEvent: {}
+[5.024330] (-) TimerEvent: {}
+[5.124847] (-) TimerEvent: {}
+[5.225370] (-) TimerEvent: {}
+[5.325926] (-) TimerEvent: {}
+[5.426451] (-) TimerEvent: {}
+[5.527014] (-) TimerEvent: {}
+[5.627573] (-) TimerEvent: {}
+[5.728100] (-) TimerEvent: {}
+[5.828632] (-) TimerEvent: {}
+[5.929151] (-) TimerEvent: {}
+[6.029700] (-) TimerEvent: {}
+[6.130226] (-) TimerEvent: {}
+[6.230915] (-) TimerEvent: {}
+[6.331460] (-) TimerEvent: {}
+[6.432045] (-) TimerEvent: {}
+[6.532589] (-) TimerEvent: {}
+[6.633104] (-) TimerEvent: {}
+[6.733630] (-) TimerEvent: {}
+[6.834123] (-) TimerEvent: {}
+[6.934577] (-) TimerEvent: {}
+[7.035091] (-) TimerEvent: {}
+[7.135622] (-) TimerEvent: {}
+[7.236114] (-) TimerEvent: {}
+[7.336647] (-) TimerEvent: {}
+[7.437142] (-) TimerEvent: {}
+[7.537703] (-) TimerEvent: {}
+[7.638194] (-) TimerEvent: {}
+[7.738741] (-) TimerEvent: {}
+[7.839267] (-) TimerEvent: {}
+[7.939820] (-) TimerEvent: {}
+[8.040325] (-) TimerEvent: {}
+[8.140888] (-) TimerEvent: {}
+[8.241459] (-) TimerEvent: {}
+[8.342006] (-) TimerEvent: {}
+[8.442566] (-) TimerEvent: {}
+[8.543057] (-) TimerEvent: {}
+[8.643589] (-) TimerEvent: {}
+[8.744119] (-) TimerEvent: {}
+[8.844648] (-) TimerEvent: {}
+[8.945182] (-) TimerEvent: {}
+[9.045743] (-) TimerEvent: {}
+[9.146270] (-) TimerEvent: {}
+[9.246832] (-) TimerEvent: {}
+[9.347362] (-) TimerEvent: {}
+[9.447919] (-) TimerEvent: {}
+[9.548450] (-) TimerEvent: {}
+[9.649212] (-) TimerEvent: {}
+[9.750004] (-) TimerEvent: {}
+[9.850633] (-) TimerEvent: {}
+[9.951212] (-) TimerEvent: {}
+[10.051682] (-) TimerEvent: {}
+[10.152384] (-) TimerEvent: {}
+[10.252809] (-) TimerEvent: {}
+[10.353289] (-) TimerEvent: {}
+[10.453708] (-) TimerEvent: {}
+[10.554200] (-) TimerEvent: {}
+[10.654752] (-) TimerEvent: {}
+[10.755238] (-) TimerEvent: {}
+[10.855780] (-) TimerEvent: {}
+[10.956273] (-) TimerEvent: {}
+[11.056834] (-) TimerEvent: {}
+[11.157338] (-) TimerEvent: {}
+[11.257918] (-) TimerEvent: {}
+[11.358531] (-) TimerEvent: {}
+[11.459039] (-) TimerEvent: {}
+[11.559632] (-) TimerEvent: {}
+[11.660127] (-) TimerEvent: {}
+[11.760651] (-) TimerEvent: {}
+[11.861140] (-) TimerEvent: {}
+[11.961685] (-) TimerEvent: {}
+[12.062175] (-) TimerEvent: {}
+[12.162647] (-) TimerEvent: {}
+[12.263107] (-) TimerEvent: {}
+[12.363746] (-) TimerEvent: {}
+[12.464258] (-) TimerEvent: {}
+[12.564903] (-) TimerEvent: {}
+[12.665629] (-) TimerEvent: {}
+[12.766043] (-) TimerEvent: {}
+[12.866561] (-) TimerEvent: {}
+[12.967089] (-) TimerEvent: {}
+[13.067587] (-) TimerEvent: {}
+[13.168084] (-) TimerEvent: {}
+[13.268575] (-) TimerEvent: {}
+[13.369415] (-) TimerEvent: {}
+[13.469977] (-) TimerEvent: {}
+[13.570516] (-) TimerEvent: {}
+[13.671037] (-) TimerEvent: {}
+[13.771590] (-) TimerEvent: {}
+[13.872132] (-) TimerEvent: {}
+[13.972689] (-) TimerEvent: {}
+[14.073215] (-) TimerEvent: {}
+[14.173775] (-) TimerEvent: {}
+[14.274305] (-) TimerEvent: {}
+[14.374868] (-) TimerEvent: {}
+[14.475390] (-) TimerEvent: {}
+[14.575947] (-) TimerEvent: {}
+[14.676506] (-) TimerEvent: {}
+[14.777039] (-) TimerEvent: {}
+[14.877576] (-) TimerEvent: {}
+[14.978108] (-) TimerEvent: {}
+[15.078647] (-) TimerEvent: {}
+[15.179167] (-) TimerEvent: {}
+[15.279754] (-) TimerEvent: {}
+[15.380299] (-) TimerEvent: {}
+[15.480899] (-) TimerEvent: {}
+[15.581393] (-) TimerEvent: {}
+[15.681940] (-) TimerEvent: {}
+[15.782499] (-) TimerEvent: {}
+[15.883102] (-) TimerEvent: {}
+[15.983632] (-) TimerEvent: {}
+[16.084067] (-) TimerEvent: {}
+[16.184568] (-) TimerEvent: {}
+[16.285053] (-) TimerEvent: {}
+[16.385547] (-) TimerEvent: {}
+[16.486097] (-) TimerEvent: {}
+[16.586496] (-) TimerEvent: {}
+[16.686920] (-) TimerEvent: {}
+[16.787405] (-) TimerEvent: {}
+[16.887900] (-) TimerEvent: {}
+[16.988325] (-) TimerEvent: {}
+[17.088775] (-) TimerEvent: {}
+[17.189194] (-) TimerEvent: {}
+[17.289627] (-) TimerEvent: {}
+[17.390063] (-) TimerEvent: {}
+[17.490730] (-) TimerEvent: {}
+[17.591135] (-) TimerEvent: {}
+[17.691601] (-) TimerEvent: {}
+[17.791994] (-) TimerEvent: {}
+[17.892451] (-) TimerEvent: {}
+[17.992915] (-) TimerEvent: {}
+[18.093363] (-) TimerEvent: {}
+[18.193777] (-) TimerEvent: {}
+[18.294217] (-) TimerEvent: {}
+[18.394598] (-) TimerEvent: {}
+[18.495081] (-) TimerEvent: {}
+[18.595668] (-) TimerEvent: {}
+[18.696130] (-) TimerEvent: {}
+[18.796556] (-) TimerEvent: {}
+[18.896972] (-) TimerEvent: {}
+[18.997377] (-) TimerEvent: {}
+[19.097883] (-) TimerEvent: {}
+[19.198306] (-) TimerEvent: {}
+[19.298717] (-) TimerEvent: {}
+[19.399148] (-) TimerEvent: {}
+[19.499642] (-) TimerEvent: {}
+[19.600091] (-) TimerEvent: {}
+[19.608030] (hexapod_link_attacher) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libhexapod_link_attacher.so\x1b[0m\n'}
+[19.700238] (-) TimerEvent: {}
+[19.800689] (-) TimerEvent: {}
+[19.901183] (-) TimerEvent: {}
+[20.001756] (-) TimerEvent: {}
+[20.102309] (-) TimerEvent: {}
+[20.202946] (-) TimerEvent: {}
+[20.303433] (-) TimerEvent: {}
+[20.403978] (-) TimerEvent: {}
+[20.504395] (-) TimerEvent: {}
+[20.548844] (hexapod_link_attacher) StdoutLine: {'line': b'[100%] Built target hexapod_link_attacher\n'}
+[20.571619] (hexapod_link_attacher) CommandEnded: {'returncode': 0}
+[20.572543] (hexapod_link_attacher) JobProgress: {'identifier': 'hexapod_link_attacher', 'progress': 'install'}
+[20.594987] (hexapod_link_attacher) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher'], 'cwd': '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GZ_SIM_RESOURCE_PATH', '/home/diego/ros_ws/install/rover_gazebo/share/rover_gazebo/models:/home/diego/ros_ws/install/rover_gazebo/share/rover_gazebo/worlds:/home/diego/ros_ws/install/rover_description/share'), ('LANGUAGE', 'en_GB:en'), ('USER', 'diego'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib:/home/diego/ros_ws/install/rover_msgs/lib:/home/diego/ros_ws/install/custom_teleop_twist_joy/lib:/home/diego/crawler/install/ros2_linkattacher/lib:/home/diego/crawler/install/linkattacher_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/diego'), ('OLDPWD', '/home/diego/assembly_with_links'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1903'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/diego/assembly_with_links/install:/home/diego/hexapod_link_attacher_ws/install:/home/diego/crawler/install:/home/diego/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'diego'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'diego'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/diego/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/diego-NBLK-WAX9X:@/tmp/.ICE-unix/1884,unix/diego-NBLK-WAX9X:/tmp/.ICE-unix/1884'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b63ac390_835a_4ba1_8bdd_a490a0acce96'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.C4QVT3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/diego/assembly_with_links/install/assembly_with_links:/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_navigation:/home/diego/ros_ws/install/rover_gazebo:/home/diego/ros_ws/install/rover_bringup:/home/diego/ros_ws/install/rover_motor_controller_cpp:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/rover_msgs:/home/diego/ros_ws/install/rover_localization:/home/diego/ros_ws/install/rover_description:/home/diego/ros_ws/install/custom_teleop_twist_joy:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/ros2_linkattacher:/home/diego/crawler/install/robot_sim:/home/diego/crawler/install/linkattacher_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/diego/hexapod_link_attacher_ws/build/hexapod_link_attacher'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/diego/ros_ws/install/rover_teleop/lib/python3.10/site-packages:/home/diego/ros_ws/install/rover_motor_controller/lib/python3.10/site-packages:/home/diego/ros_ws/install/rover_msgs/local/lib/python3.10/dist-packages:/home/diego/ros_ws/install/crimsonbot/lib/python3.10/site-packages:/home/diego/crawler/install/robot_sim/lib/python3.10/site-packages:/home/diego/crawler/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/diego/assembly_with_links/install/assembly_with_links:/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher:/home/diego/ros_ws/install/rover_navigation:/home/diego/ros_ws/install/rover_gazebo:/home/diego/ros_ws/install/rover_bringup:/home/diego/ros_ws/install/rover_motor_controller_cpp:/home/diego/ros_ws/install/rover_msgs:/home/diego/ros_ws/install/rover_localization:/home/diego/ros_ws/install/rover_description:/home/diego/ros_ws/install/custom_teleop_twist_joy:/home/diego/crawler/install/ros2_linkattacher:/home/diego/crawler/install/linkattacher_msgs:/home/diego/ros_ws/install/rover_teleop:/home/diego/ros_ws/install/rover_motor_controller:/home/diego/ros_ws/install/crimsonbot:/home/diego/crawler/install/robot_sim:/opt/ros/humble')]), 'shell': False}
+[20.604556] (-) TimerEvent: {}
+[20.609377] (hexapod_link_attacher) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[20.610026] (hexapod_link_attacher) StdoutLine: {'line': b'-- Installing: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib/libhexapod_link_attacher.so\n'}
+[20.617368] (hexapod_link_attacher) StdoutLine: {'line': b'-- Set runtime path of "/home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/lib/libhexapod_link_attacher.so" to ""\n'}
+[20.618278] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/library_path.sh\n'}
+[20.618457] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/library_path.dsv\n'}
+[20.618593] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/ament_index/resource_index/package_run_dependencies/hexapod_link_attacher\n'}
+[20.618706] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/ament_index/resource_index/parent_prefix_path/hexapod_link_attacher\n'}
+[20.618820] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/ament_prefix_path.sh\n'}
+[20.618957] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/ament_prefix_path.dsv\n'}
+[20.619090] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/path.sh\n'}
+[20.619224] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/environment/path.dsv\n'}
+[20.619371] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/local_setup.bash\n'}
+[20.619556] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/local_setup.sh\n'}
+[20.619742] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/local_setup.zsh\n'}
+[20.619853] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/local_setup.dsv\n'}
+[20.619962] (hexapod_link_attacher) StdoutLine: {'line': b'-- Installing: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.dsv\n'}
+[20.620071] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/ament_index/resource_index/packages/hexapod_link_attacher\n'}
+[20.620181] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[20.620312] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[20.620434] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/cmake/hexapod_link_attacherConfig.cmake\n'}
+[20.620564] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/cmake/hexapod_link_attacherConfig-version.cmake\n'}
+[20.620674] (hexapod_link_attacher) StdoutLine: {'line': b'-- Up-to-date: /home/diego/hexapod_link_attacher_ws/install/hexapod_link_attacher/share/hexapod_link_attacher/package.xml\n'}
+[20.623032] (hexapod_link_attacher) CommandEnded: {'returncode': 0}
+[20.655450] (hexapod_link_attacher) JobEnded: {'identifier': 'hexapod_link_attacher', 'rc': 0}
+[20.656415] (-) EventReactorShutdown: {}

@@ -1,0 +1,58 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000 # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - 1-j1
+      - 1-j2
+      - 1-j3
+      - 2-j1
+      - 2-j2
+      - 2-j3
+      - 3-j1
+      - 3-j2
+      - 3-j3
+      - 4-j1
+      - 4-j2
+      - 4-j3
+      - 5-j1
+      - 5-j2
+      - 5-j3
+      - 6-j1
+      - 6-j2
+      - 6-j3
+
+    # CRITICAL: Matched the exact joint names to apply the PID gains properly
+    gains:
+      1-j1: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      1-j2: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      1-j3: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      2-j1: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      2-j2: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      2-j3: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      3-j1: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      3-j2: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      3-j3: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      4-j1: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      4-j2: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      4-j3: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      5-j1: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      5-j2: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      5-j3: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      6-j1: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      6-j2: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+      6-j3: {p: 50.0, i: 0.1, d: 18.0, i_clamp_max: 1.0, i_clamp_min: -1.0}
+
+    command_interfaces:
+      - effort
+    state_interfaces:
+      - position
+      - velocity

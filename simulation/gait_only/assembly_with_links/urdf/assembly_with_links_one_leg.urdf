@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="assembly_with_links">
+  
+  <link name="world"/>
+  <joint name="world_fixed_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+  
+  <gazebo>
+    <joint name="world_fixed_sdf" type="fixed">
+      <parent>world</parent>
+      <child>base_link</child>
+    </joint>
+  </gazebo>
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-1.0875 0.26935 10.165" rpy="0 0 0" />
+      <mass value="56.333" />
+      <inertia ixx="33.75" ixy="-1.5275" ixz="-0.0531" iyy="54.24" iyz="0.0031" izz="69.23" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/base_link.STL" scale="5.0 5.0 5.0" /></geometry>
+      <material name=""><color rgba="0.79216 0.81961 0.93333 1" /></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/base_link.STL" scale="5.0 5.0 5.0" /></geometry>
+    </collision>
+  </link>
+
+  <link name="link_1">
+    <inertial>
+      <origin xyz="-0.20856 0.3073 0.34717" rpy="0 0 0" />
+      <mass value="50.218" />
+      <inertia ixx="98.89" ixy="1.12" ixz="-5.92" iyy="96.68" iyz="-1.92" izz="110.30" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/link_1.STL" scale="5.0 5.0 5.0" /></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/link_1.STL" scale="5.0 5.0 5.0" /></geometry>
+    </collision>
+  </link>
+
+  <joint name="joint0" type="revolute">
+    <origin xyz="-0.6002 -5.0825 0" rpy="1.5708 0 -1.064" />
+    <parent link="base_link" />
+    <child link="link_1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <link name="link_2">
+    <inertial>
+      <origin xyz="-0.18462 0.24786 0.2365" rpy="0 0 0" />
+      <mass value="106.35" />
+      <inertia ixx="181.77" ixy="42.10" ixz="31.88" iyy="158.71" iyz="-70.42" izz="147.52" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/link_2.STL" scale="5.0 5.0 5.0" /></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/link_2.STL" scale="5.0 5.0 5.0" /></geometry>
+    </collision>
+  </link>
+
+  <joint name="joint1" type="revolute">
+    <origin xyz="-0.20784 0.15407 0.347605" rpy="0.58478 -0.10213 0.33637" />
+    <parent link="link_1" />
+    <child link="link_2" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <link name="link_3">
+    <inertial>
+      <origin xyz="-0.043151 -0.24085 0.065611" rpy="0 0 0" />
+      <mass value="23.267" />
+      <inertia ixx="32.32" ixy="-3.54" ixz="3.20" iyy="7.66" iyz="6.06" izz="28.82" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/link_3.STL" scale="5.0 5.0 5.0" /></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/link_3.STL" scale="5.0 5.0 5.0" /></geometry>
+    </collision>
+  </link>
+
+  <joint name="joint2" type="revolute">
+    <origin xyz="-0.15279 0.247865 0.255535" rpy="-1.5826 -0.64796 -0.64086" />
+    <parent link="link_2" />
+    <child link="link_3" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+
+  <link name="link_4">
+    <inertial>
+      <origin xyz="-0.1292 -1.3282 0.2285" rpy="0 0 0" />
+      <mass value="33.179" />
+      <inertia ixx="15.13" ixy="-0.29" ixz="-2.43" iyy="15.87" iyz="0.48" izz="17.23" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/link_4.STL" scale="5.0 5.0 5.0" /></geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://assembly_with_links/meshes/link_4.STL" scale="5.0 5.0 5.0" /></geometry>
+    </collision>
+  </link>
+
+  <joint name="joint3" type="revolute">
+    <origin xyz="-0.039738 -0.237705 0.06646" rpy="-0.15279 -0.0069803 -0.091129" />
+    <parent link="link_3" />
+    <child link="link_4" />
+    <axis xyz="0.85828 0 0.51318" />
+    <limit lower="-1.57" upper="1.57" effort="1000.0" velocity="5" />
+    <dynamics damping="5.0" friction="1.0" />
+  </joint>
+  
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware><plugin>gazebo_ros2_control/GazeboSystem</plugin></hardware>
+    <joint name="joint0"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="joint1"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+    <joint name="joint2"><command_interface name="position"/><state_interface name="position"><param name="initial_value">0.0</param></state_interface><state_interface name="velocity"/></joint>
+  </ros2_control>
+
+  <gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <parameters>__CONTROLLER_YAML_PATH__</parameters>
+    </plugin>
+  </gazebo>
+</robot>
