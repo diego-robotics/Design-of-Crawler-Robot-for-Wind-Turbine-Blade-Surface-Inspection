@@ -1,0 +1,24 @@
+1. Put a weight on top of the printed enclosure so the leg doesn't tip over
+
+2. Check if the Li-Po battery and the power bank are charged
+
+3. Connect the power bank to the Raspberry Pi (USB-C cable)
+
+4. Connect the Raspberry Pi to the monitor (micro-HDMI to HDMI cable)
+
+5. Connect the Xbox controller to the Raspberry Pi (USB-C cable)
+
+6. Connect the Li-Po battery to the circuit (LEDs on the motor driver and on the buck converter should light up)
+
+7. Open a new terminal window and run the following command: python3 main.py
+
+8. The terminal is now showing a continuous flow of voltage values coming from the vacuum sensor. Try moving the left and right joysticks: the leg's joints should move too. The left joystick controls Joint 1 (horizontally) and Joint 2 (vertically), while the right joystick controls Joint 3 (vertically)
+
+9. Press X on the controller. You should see Joint 1 going to its home position (0deg). The same applies to Y and B (Joint 2 and Joint 3 respectively)
+
+10. Press A on the controller. You should hear the vacuum pump running and the solenoid valve being switched off ("click" sound), as well as you should feel the suction at the bottom of the suction cup. On the terminal you should see that the data is being logged.
+
+11. Press A again. You should hear the vacuum pump stop and the valve being switched on. On the terminal, you are asked to answer several questions about the test. Finally, the data is saved in a spreadsheet called "payload_experiments" located in the home folder.
+
+Pi username: diego
+Pi password: diego
