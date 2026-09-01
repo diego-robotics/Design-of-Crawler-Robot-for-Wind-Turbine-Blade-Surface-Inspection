@@ -1,6 +1,8 @@
 # Suction-Based Crawler for Wind Turbine Blade Inspection
 
-![Crawler](docs/crawler.png)
+<p align="center">
+  <img src="docs/crawler.png" alt="Crawler">
+</p>
 
 This repository contains the two software components developed to validate a suction-based crawler leg for wind turbine blade inspection. Two subfolders, two complementary validation efforts:
 
@@ -25,17 +27,20 @@ Full detail in `simulation/README.md`. Two packages:
 - **`gait_and_adhesion`** — `assembly_with_links` (URDF, world, launch), `gait_control.py`, and a custom `hexapod_link_attacher` Gazebo plugin. This plugin was built from scratch because two existing off-the-shelf attachment plugins were unusable for this case: one only supports a single global attachment at a time, which can't represent three legs attaching independently during a tripod gait; the other proved unreliable in testing (see the simulation README for the debugging done). Adhesion is confirmed working correctly in isolated, single-leg testing, but intermittently stalls when running continuously alongside the full gait controller. This package is included specifically to document that attempt and the debugging trail, not as a fully working demo.
 - **`gait_only`** — the same robot and gait controller, with the adhesion plugin fully removed. This is the reliable fallback: use it to see the tripod gait itself working cleanly, without the attachment reliability issue.
 
-![Tripod gait in Gazebo — group A stance](docs/tripod_gait_group_a.png)
+<p align="center">
+  <img src="docs/tripod_gait_group_a.png" alt="Tripod gait in Gazebo — group A stance">
+</p>
+<p align="center"><i>Phase 1 of the tripod gait: legs front-left, mid-right, and rear-left are lifted and swinging, while the other three legs remain planted and attached to support the body.</i></p>
 
-*Phase 1 of the tripod gait: legs front-left, mid-right, and rear-left are lifted and swinging, while the other three legs remain planted and attached to support the body.*
+<p align="center">
+  <img src="docs/tripod_gait_group_b.png" alt="Tripod gait in Gazebo — group B stance">
+</p>
+<p align="center"><i>Phase 2 of the tripod gait: the leg groups have switched roles — front-right, mid-left, and rear-right are now lifted and swinging, while the previously swinging legs are planted and attached.</i></p>
 
-![Tripod gait in Gazebo — group B stance](docs/tripod_gait_group_b.png)
-
-*Phase 2 of the tripod gait: the leg groups have switched roles — front-right, mid-left, and rear-right are now lifted and swinging, while the previously swinging legs are planted and attached.*
-
-![Tripod gait in Gazebo — full cycle](docs/tripod_gait.gif)
-
-*Continuous tripod gait cycle in Gazebo, showing the two leg groups alternating between the swing and stance phases shown above.*
+<p align="center">
+  <img src="docs/tripod_gait.gif" alt="Tripod gait in Gazebo — full cycle">
+</p>
+<p align="center"><i>Continuous tripod gait cycle in Gazebo, showing the two leg groups alternating between the swing and stance phases shown above.</i></p>
 
 Before running, make sure `gait_control.py` is located in your home folder (referenced by the launch file using a fixed path).
 
@@ -68,12 +73,13 @@ Single-leg hardware rig: Raspberry Pi 5 + Arduino (Elegoo UNO) + 3 servos + a 12
   - **A button** — toggles the vacuum on/off **and**, simultaneously, starts/stops experiment recording
 
   While vacuum is off, the script keeps a rolling baseline of the sensor voltage; while it's on, it logs voltage against time. On stopping a trial, it computes the average voltage drop, percentage drop, standard deviation, and stabilisation time, applies a pass/fail threshold (average hold voltage < 3.9 V = successful attachment), prompts the operator for trial conditions (surface material, payload weight, approach angle, curvature, wet/dry, induced failure), and appends one row to the results spreadsheet.
-- **`instructions_prototype`** — bench setup and operating checklist: power-up sequence, cabling order, and a first-use functional check to run before starting a trial session.
+- **`instructions_prototype.txt`** — bench setup and operating checklist: power-up sequence, cabling order, and a first-use functional check to run before starting a trial session.
 - **Spreadsheets** — auto-generated trial logs (raw data), one row per trial: `experiment_logs` for Series A (unloaded attachment/detachment), `payload_experiments.xlsx` for Series B (loaded payload-holding).
 
-![Single-leg prototype on the test rig](docs/test_rig.jpeg)
-
-*The assembled single-leg prototype mounted on the fixed test rig, with the suction cup end-effector in contact with a test surface sample.*
+<p align="center">
+  <img src="docs/test_rig.jpeg" alt="Single-leg prototype on the test rig">
+</p>
+<p align="center"><i>The assembled single-leg prototype mounted on the fixed test rig, with the suction cup end-effector in contact with a test surface sample.</i></p>
 
 Before running, make sure `spider_leg_keyboard_control.ino` is uploaded to the Arduino board, and that `main.py` is located in the home folder on the Raspberry Pi 5.
 
