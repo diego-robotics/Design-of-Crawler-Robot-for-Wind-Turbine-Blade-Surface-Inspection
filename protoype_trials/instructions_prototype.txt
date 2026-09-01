@@ -20,5 +20,4 @@
 
 11. Press A again. You should hear the vacuum pump stop and the valve being switched on. On the terminal, you are asked to answer several questions about the test. Finally, the data is saved in a spreadsheet called "payload_experiments" located in the home folder.
 
-Pi username: diego
-Pi password: diego
+
