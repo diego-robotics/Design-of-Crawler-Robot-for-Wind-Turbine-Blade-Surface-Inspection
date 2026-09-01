@@ -26,12 +26,15 @@ Full detail in `simulation/README.md`. Two packages:
 - **`gait_only`** — the same robot and gait controller, with the adhesion plugin fully removed. This is the reliable fallback: use it to see the tripod gait itself working cleanly, without the attachment reliability issue.
 
 ![Tripod gait in Gazebo — group A stance](docs/tripod_gait_group_a.png)
-*Phase 1 of the tripod gait: legs front-left, mid-right, and rear-left are lifted and swinging forward, while the other three legs remain planted and attached to support the body.*
+
+*Phase 1 of the tripod gait: legs front-left, mid-right, and rear-left are lifted and swinging, while the other three legs remain planted and attached to support the body.*
 
 ![Tripod gait in Gazebo — group B stance](docs/tripod_gait_group_b.png)
+
 *Phase 2 of the tripod gait: the leg groups have switched roles — front-right, mid-left, and rear-right are now lifted and swinging, while the previously swinging legs are planted and attached.*
 
 ![Tripod gait in Gazebo — full cycle](docs/tripod_gait.gif)
+
 *Continuous tripod gait cycle in Gazebo, showing the two leg groups alternating between the swing and stance phases shown above.*
 
 Before running, make sure `gait_control.py` is located in your home folder (referenced by the launch file using a fixed path).
@@ -69,6 +72,7 @@ Single-leg hardware rig: Raspberry Pi 5 + Arduino (Elegoo UNO) + 3 servos + a 12
 - **Spreadsheets** — auto-generated trial logs (raw data), one row per trial: `experiment_logs` for Series A (unloaded attachment/detachment), `payload_experiments.xlsx` for Series B (loaded payload-holding).
 
 ![Single-leg prototype on the test rig](docs/test_rig.jpeg)
+
 *The assembled single-leg prototype mounted on the fixed test rig, with the suction cup end-effector in contact with a test surface sample.*
 
 Before running, make sure `spider_leg_keyboard_control.ino` is uploaded to the Arduino board, and that `main.py` is located in the home folder on the Raspberry Pi 5.
